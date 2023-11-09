@@ -1640,7 +1640,7 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 1000px;
-  height: 600px;
+  height: 650px;
   display: flex;
   border-radius: 20px;
   padding: 20px;
@@ -1746,6 +1746,7 @@ a {
 }
 .login .login__right .form .login__row.row-2 {
   justify-content: center;
+  align-items: center;
   margin-top: 10px;
   font-size: 1.6rem;
 }
@@ -1786,14 +1787,13 @@ a {
   top: 15px;
 }
 
-small {
-  position: absolute;
-  bottom: -14px;
-  font-size: 1rem;
-}
-
 .nameSignUp {
   top: 200px;
+}
+
+.text {
+  margin-top: 5px;
+  font-size: 1.2rem;
 }
 
 /*# sourceMappingURL=main.css.map */
