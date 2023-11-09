@@ -1144,6 +1144,72 @@ button {
   font-family: inherit;
 }
 
+.pop-up {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: 2;
+}
+.pop-up.visible {
+  display: block;
+}
+.pop-up.hidden {
+  display: none;
+}
+.pop-up__body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 50px;
+}
+.pop-up .icon {
+  height: 50px;
+  width: 50px;
+  background: #3a5a40;
+  border-radius: 99px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pop-up .icon > i {
+  font-size: 3rem;
+  color: #fff;
+}
+.pop-up span {
+  margin: 10px 0;
+  font-size: 2rem;
+  font-weight: 500;
+}
+.pop-up .desc {
+  max-width: 270px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 1.4rem;
+}
+.pop-up .btn {
+  outline: none;
+  border: none;
+  padding: 10px 30px;
+  cursor: pointer;
+  border-radius: 10px;
+  background: #3a5a40;
+}
+.pop-up .btn > a {
+  color: #fff;
+  pointer-events: none;
+}
+
 .container {
   max-width: 1320px;
 }
@@ -1565,6 +1631,169 @@ a {
   object-fit: cover;
   width: 100%;
   border-radius: 10px;
+}
+
+.login {
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1000px;
+  height: 600px;
+  display: flex;
+  border-radius: 20px;
+  padding: 20px;
+}
+.login .login__left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  border: 1px solid #ddd;
+}
+.login .login__left .login__logo {
+  position: absolute;
+  left: 160px;
+  top: 10px;
+}
+.login .login__left .login__pic {
+  width: 110px;
+  height: 60px;
+  object-fit: cover;
+}
+.login .login__left .login__pic-2 {
+  position: absolute;
+  bottom: -80px;
+  width: 400px;
+  height: 600px;
+  object-fit: contain;
+}
+.login .login__left .name {
+  color: #656689;
+  font-size: 1.6rem;
+  line-height: 1.88;
+  font-family: "Sora";
+}
+.login .login__right {
+  border: 1px solid #ddd;
+  padding: 20px;
+}
+.login .login__right .form .form-login {
+  margin-top: 50px;
+}
+.login .login__right .form .form-login .form__info {
+  display: flex;
+  flex-direction: column;
+}
+.login .login__right .form .form-login .form__info label {
+  margin: 20px 0 10px;
+}
+.login .login__right .form .form-login .form__info input {
+  width: 400px;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  outline: none;
+  font-size: 1.6rem;
+}
+.login .login__right .form .form-login .form__info input::placeholder {
+  font-size: 1.4rem;
+}
+.login .login__right .form .form-login .btnSignUp,
+.login .login__right .form .form-login .btnSignIn {
+  margin-top: 50px;
+  outline: none;
+  width: 400px;
+  height: 50px;
+  background: #588157;
+  border: 1px solid #588157;
+  color: #fff;
+  font-family: "Sora";
+  transition: all 0.25s linear;
+}
+.login .login__right .form .form-login .btnSignUp:hover,
+.login .login__right .form .form-login .btnSignIn:hover {
+  background: #3a5a40;
+}
+.login .login__right .form .form-login.form-SignUp {
+  margin-top: 10px;
+}
+.login .login__right .form .form-login.form-SignUp .btnSignUp {
+  margin-top: 20px;
+}
+.login .login__right .form.visible {
+  display: block;
+}
+.login .login__right .form.hidden {
+  display: none;
+}
+.login .login__right .form .login__desc {
+  color: #656689;
+  font-size: 1.6rem;
+  line-height: 1.88;
+}
+.login .login__right .form .login__row {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+  font-size: 2rem;
+}
+.login .login__right .form .login__row .text {
+  font-weight: 500;
+  font-size: 2.2rem;
+  color: #0b650f;
+}
+.login .login__right .form .login__row.row-2 {
+  justify-content: center;
+  margin-top: 10px;
+  font-size: 1.6rem;
+}
+.login .login__right .form .login__row.row-2 .text {
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.button-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  padding: 10px 15px;
+  width: 100px;
+  height: 40px;
+  background: #3a5a40;
+  border-radius: 99px;
+  cursor: pointer;
+}
+.button-back > i,
+.button-back span {
+  color: #fff;
+  pointer-events: none;
+}
+
+.password {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.password i {
+  position: absolute;
+  right: 50px;
+  top: 15px;
+}
+
+small {
+  position: absolute;
+  bottom: -14px;
+  font-size: 1rem;
+}
+
+.nameSignUp {
+  top: 200px;
 }
 
 /*# sourceMappingURL=main.css.map */
