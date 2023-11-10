@@ -48,17 +48,7 @@ iconEye2.addEventListener("click", function (e) {
         passwordSignUp2.type = "password";
     }
 });
-
-const iconEyeLogin = document.querySelector(".icon-login");
-iconEyeLogin.addEventListener("click", function (e) {
-    iconEyeLogin.classList.toggle("fa-eye-slash");
-    iconEyeLogin.classList.toggle("fa-eye");
-    if (password.type == "password") {
-        password.type = "text";
-    } else {
-        password.type = "password";
-    }
-});
+const icon
 
 const nameSignUp = document.getElementById("nameSignUp");
 const emailSignUp = document.getElementById("emailSignUp");
@@ -159,7 +149,7 @@ const errTextName = document.querySelector(".textErrName");
 const errTextEmail = document.querySelector(".textErrEmail");
 const errTextPass = document.querySelector(".textErrPass");
 const errTextPass2 = document.querySelector(".textErrPass2");
-const errTextCheckPass = document.querySelector(".checkPass2");
+const errTextCheckPass = document.querySelector(".checkPass2")
 // oninvalid:"errName()" : báo lỗi
 // oninput:"handleInputName()" : tắt báo lỗi
 function errName() {
@@ -251,18 +241,16 @@ formSignUp.addEventListener("submit", async function (e) {
         passwordSignUp: this.elements["passwordSignUp"].value,
         passwordSignUp2: this.elements["passwordSignUp2"].value,
     };
-    const pass1 = passwordSignUp.value;
-    const pass2 = passwordSignUp2.value;
-    if (pass1 !== pass2) {
-        errTextCheckPass.style.display = "block";
-        // nếu pass không trùng nhau thì in lệnh và không add vô db
+    this.reset();
+    await addInfoSignUp(login);
+    popup.classList.remove("hidden");
+    popup.classList.add("visible");
+    const pass1 = passwordSignUp.value
+    const pass2 = passwordSignUp2.value
+    if(pass1 !== pass2) {
+        errTextCheckPass.style.display = "block"
     } else {
-        // ngược lại nếu pass trùng nhau thì add vô db
-        errTextCheckPass.style.display = "none";
-        this.reset();
-        await addInfoSignUp(login);
-        popup.classList.remove("hidden");
-        popup.classList.add("visible");
+        errTextCheckPass.style.display = "none"
     }
 });
 
@@ -293,7 +281,7 @@ formSignIn.addEventListener("submit", async function (e) {
     ); // nếu tìm thấy thì thành công và ngược lại
     if (found) {
         window.location.href = "index.html";
-        localStorage.setItem("userName", found.nameSignUp);
+        localStorage.setItem("userName", found.nameSignUp)
     } else {
         alert("that bai");
     }

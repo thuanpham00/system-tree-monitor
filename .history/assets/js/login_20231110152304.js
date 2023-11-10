@@ -257,7 +257,7 @@ formSignUp.addEventListener("submit", async function (e) {
         errTextCheckPass.style.display = "block";
         // nếu pass không trùng nhau thì in lệnh và không add vô db
     } else {
-        // ngược lại nếu pass trùng nhau thì add vô db
+        // ngược lại nếu pass trùng nhau
         errTextCheckPass.style.display = "none";
         this.reset();
         await addInfoSignUp(login);

@@ -255,9 +255,7 @@ formSignUp.addEventListener("submit", async function (e) {
     const pass2 = passwordSignUp2.value;
     if (pass1 !== pass2) {
         errTextCheckPass.style.display = "block";
-        // nếu pass không trùng nhau thì in lệnh và không add vô db
     } else {
-        // ngược lại nếu pass trùng nhau thì add vô db
         errTextCheckPass.style.display = "none";
         this.reset();
         await addInfoSignUp(login);

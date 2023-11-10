@@ -128,7 +128,7 @@
                             <span>Sign In to</span>
                             <span class="text">FarmControl</span>
                         </div>
-                        <form autocomplete="on" class="form-login">
+                        <form autocomplete="off" class="form-login">
                             <div class="form__info">
                                 <label for="email">Email</label>
                                 <input
@@ -141,16 +141,13 @@
                             </div>
                             <div class="form__info">
                                 <label for="password">Password</label>
-                                <div class="password">
-                                    <input
-                                        type="password"
-                                        class="input"
-                                        placeholder="6+ Characters, 1 Capital letter, 1 special character"
-                                        name="password"
-                                        id="password"
-                                    />
-                                    <i class="fa-solid fa-eye icon-login"></i>
-                                </div>
+                                <input
+                                    type="text"
+                                    class="input"
+                                    placeholder="6+ Characters, 1 Capital letter, 1 special character"
+                                    name="password"
+                                    id="password"
+                                />
                             </div>
                             <button type="submit" class="btnSignIn">
                                 Sign In
@@ -169,7 +166,7 @@
                             <span>Sign Up to</span>
                             <span class="text">FarmControl</span>
                         </div>
-                        <form autocomplete="on" class="form-login form-SignUp">
+                        <form autocomplete="off" class="form-login form-SignUp">
                             <div class="form__info">
                                 <label for="nameSignUp">Name</label>
                                 <input
@@ -183,7 +180,7 @@
                                     oninput="handleInputName()"
                                 />
                                 <p
-                                    class="text textErrName"
+                                    class=" text textErrName"
                                     style="color: red; display: none"
                                 >
                                     Name không hợp lệ
@@ -253,20 +250,13 @@
                                 >
                                     Password không hợp lệ
                                 </p>
-                                <p
-                                    class="text checkPass2"
-                                    style="color: red; display: none"
-                                >
-                                    Mật khẩu không khớp
-                                </p>
+                                <p class="text checkPass2" style="color: red; display: none">Mật khẩu không khớp</p>
                             </div>
                             <button type="submit" class="btnSignUp">
                                 Create account
                             </button>
                             <div class="login__row row-2">
-                                <span class="text" style="color: #000"
-                                    >Already have an account</span
-                                >
+                                <span class="text" style="color: #000">Already have an account</span>
                                 <span class="text signUp">Sign in</span>
                             </div>
                         </form>
