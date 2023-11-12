@@ -53,7 +53,7 @@ window.addEventListener("load", function (e) {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    const userName = sessionStorage.getItem("userName");
+    const userName = localStorage.getItem("userName");
     if (userName) {
         const headerBtn = document.querySelector(".header__btn");
         headerBtn.style.display = "none";
