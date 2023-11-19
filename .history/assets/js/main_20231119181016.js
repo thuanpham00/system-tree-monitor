@@ -51,11 +51,9 @@ window.addEventListener("load", function (e) {
         line.style.width = 0;
     });
 
-    const headerLinkContact = document.querySelector(
-        ".header-list__link.contact"
-    );
-    headerLinkContact.addEventListener("click", function (e) {
-        const page = window.scrollTo(0,1900);
+    const headerLinkContact = document.querySelector(".header-list__link.contact")
+    headerLinkContact.addEventListener("click", function(e) {
+        console.log(window.scr)
     })
 });
 

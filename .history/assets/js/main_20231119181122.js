@@ -55,7 +55,7 @@ window.addEventListener("load", function (e) {
         ".header-list__link.contact"
     );
     headerLinkContact.addEventListener("click", function (e) {
-        const page = window.scrollTo(0,1900);
+        const page = window.scrollTo(900);
     })
 });
 
