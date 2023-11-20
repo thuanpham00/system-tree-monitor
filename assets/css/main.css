@@ -2134,6 +2134,21 @@ a {
   width: 100%;
   height: 600px;
 }
+.introduce .introduce__partner .introduce__listDT {
+  margin: 0 auto;
+  width: 900px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.introduce .introduce__partner .introduce__listDT .img__dt {
+  object-fit: contain;
+  width: 200px;
+  height: 120px;
+}
+.introduce .introduce__partner .introduce__listDT.DT-2 {
+  width: 500px;
+}
 
 .map {
   position: relative;
@@ -2289,18 +2304,17 @@ a {
   margin-top: 50px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  justify-content: center;
   gap: 30px;
 }
 .nav__list .nav__item {
+  position: relative;
   padding-top: 20px;
-  height: 340px;
+  height: 330px;
   background: #f7f5ec;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 5px;
-  transition: all 0.3s linear;
   overflow: hidden;
-  position: relative;
+  transition: all 0.3s linear;
 }
 .nav__list .nav__item .nav__thumb {
   display: inline-block;
@@ -2314,7 +2328,7 @@ a {
   width: 100%;
   height: 0;
   border-radius: 50%;
-  background-color: #1369ce;
+  background-color: #bc4749;
   position: absolute;
   bottom: 135%;
   right: 0;
@@ -2323,23 +2337,15 @@ a {
   transform: scale(3);
   transition: all 0.3s linear 0s;
 }
-.nav__list .nav__item .nav__thumb::after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background-color: #1369ce;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
 .nav__list .nav__item:hover .nav__thumb::before {
   height: 100%;
 }
 .nav__list .nav__item:hover .nav__img {
   box-shadow: 0 0 0 14px #f7f5ec;
   transform: scale(0.7);
+}
+.nav__list .nav__item:hover .social {
+  bottom: 0;
 }
 .nav__list .nav__img {
   height: auto;
@@ -2353,7 +2359,7 @@ a {
   text-align: center;
 }
 .nav__list .nav__name {
-  margin-top: 20px;
+  margin-top: 10px;
   font-size: 2rem;
   color: #bc4749;
   font-weight: 500;
@@ -2370,23 +2376,16 @@ a {
   margin-bottom: 20px;
 }
 .nav .social {
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  background-color: #1369ce;
   position: absolute;
-  bottom: -100px;
+  width: 100%;
+  height: 30px;
+  background-color: #bc4749;
+  bottom: -150px;
   left: 0;
-  transition: all 0.5s ease 0s;
-}
-.nav .nav__item:hover .social {
-  bottom: 0;
-}
-.nav .social {
-  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.5s ease 0s;
 }
 .nav .social a {
   display: block;
@@ -2399,6 +2398,47 @@ a {
 .nav .social a:hover {
   color: #1369ce;
   background-color: #f7f5ec;
+}
+
+.nav__page .nav__inner {
+  margin-top: 50px;
+  display: flex;
+  column-gap: 20px;
+}
+.nav__page .nav__inner .nav__content {
+  height: 400px;
+  width: 800px;
+  object-fit: contain;
+}
+.nav__page .nav__quotes {
+  margin-top: 5px;
+  font-size: 3.6rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-style: italic;
+  width: 900px;
+}
+.nav__page .nav__tittle {
+  font-size: 1.8rem;
+}
+.nav__page .nav__text {
+  margin-top: 10px;
+  font-size: 1.8rem;
+  line-height: 1.4;
+}
+
+.nav__page.pageSpecial {
+  margin-top: 50px;
+  background-color: #f5ebe0;
+  padding: 30px 0;
+}
+.nav__page.pageSpecial .nav__inner {
+  display: flex;
+  column-gap: 20px;
+}
+
+.nav__page .nav__desc span {
+  display: block;
+  margin-bottom: 15px;
 }
 
 /*# sourceMappingURL=main.css.map */
