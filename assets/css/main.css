@@ -2517,7 +2517,7 @@ a {
   height: 140px;
   border-radius: 25px;
   background-color: #a3b18a;
-  padding: 15px;
+  padding: 15px 15px 15px 20px;
   transition: all 0.25s linear;
 }
 .service__content .service__box .service__inner {
@@ -2532,14 +2532,14 @@ a {
 .service__content .service__box .service__inner .text span {
   font-family: "Montserrat";
   width: 250px;
-  margin-bottom: 5px;
   display: block;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
+  line-height: 1;
 }
 .service__content .service__box .service__inner .text div {
   font-family: "Montserrat";
-  margin-top: 5px;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
+  line-height: 1;
   width: 250px;
 }
 .service__content .service__box .service__inner .text div > a {
@@ -2551,7 +2551,7 @@ a {
   transform: translateY(-10px);
 }
 .service__sick {
-  margin-top: 50px;
+  margin: 50px 0 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2624,6 +2624,174 @@ a {
 }
 .service__sick .service__list .service__item .service__link:hover {
   background: #3a5a40;
+}
+.service__rateList {
+  margin-top: 50px;
+  max-width: 1260px;
+  display: flex;
+  column-gap: 30px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+}
+.service__rateList .service__rateItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px;
+  padding: 15px 20px;
+  min-width: 250px;
+  height: 230px;
+  background: #f5ebe0;
+}
+.service__rateList .service__avatar {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 99%;
+}
+.service__rateList .service__row {
+  margin-top: 10px;
+  justify-content: flex-start;
+  column-gap: 10px;
+}
+.service__rateList .service__row .service__name {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.service__rateList .service__row .service__desc {
+  color: #656689;
+  font-size: 1.6rem;
+  line-height: 1.88;
+  font-size: 1.5rem;
+}
+.service__rateList .service__text {
+  margin-top: 10px;
+  line-height: 1.2;
+  color: #656689;
+  font-size: 1.6rem;
+  line-height: 1.88;
+  font-size: 1.5rem;
+}
+.service__rateList .service__stars i {
+  color: #fcbf49;
+}
+.service__rateList .service__stars i.special {
+  color: #dadada;
+}
+
+.service__row.special {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.service__row.special .service__heading {
+  position: absolute;
+  left: 35%;
+}
+.service__row.special .service__button {
+  display: flex;
+  column-gap: 10px;
+  position: absolute;
+  right: 50px;
+}
+.service__row.special .service__button .service__btn {
+  width: 40px;
+  height: 40px;
+  outline: none;
+  border: none;
+  border-radius: 25px;
+  background-color: #adc178;
+  transition: all 0.25s linear;
+}
+.service__row.special .service__button .service__btn:hover {
+  background-color: #0b650f;
+}
+
+.sick {
+  margin-top: 30px;
+}
+.sick__inner {
+  border-radius: 5px;
+  background: #a3b18a;
+  padding: 0 50px 50px;
+}
+.sick__inner .service__heading {
+  font-size: 4rem;
+  margin-bottom: 30px;
+}
+.sick__inner .sick__row {
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sick__inner .sick__row .sick__title {
+  margin-left: 30px;
+  width: 100px;
+  font-size: 4rem;
+  font-family: 600;
+  color: #003049;
+}
+.sick__inner .sick__row .sick__title > .text1 {
+  margin-left: 100px;
+}
+.sick__inner .sick__row .sick__title .text2 {
+  display: block;
+  margin-left: -200px;
+}
+.sick__inner .sick__row .sick__title .text3 {
+  display: block;
+  margin-left: -150px;
+}
+.sick__inner .sick__desc {
+  font-family: "Roboto";
+  padding: 25px;
+  border-radius: 25px;
+  width: 800px;
+  min-height: 120px;
+  background-color: #dedbd2;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  font-size: 2rem;
+  font-style: italic;
+  line-height: 1.2;
+}
+.sick__inner .sick__desc.desc-1 {
+  padding: 30px 40px;
+  width: 1200px;
+  margin: 50px auto 20px;
+}
+.sick__inner .sick__color {
+  display: inline;
+  color: #0b650f;
+  font-weight: 500;
+}
+.sick__inner .sick__text {
+  font-family: "Roboto";
+  --height: 60px;
+  display: block;
+  line-height: var(--height);
+  column-gap: 10px;
+  min-width: 100px;
+  height: var(--height);
+  background: #588157;
+  border: #588157;
+  text-align: center;
+  border-radius: 99px;
+  max-width: 400px;
+  margin: 0 auto;
+  font-size: 2.4rem;
+  color: #dadada;
+}
+.sick__inner .sick__listImg {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 30px;
+}
+.sick__inner .sick__listImg > img {
+  border-radius: 5px;
+  object-fit: contain;
+  width: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */
