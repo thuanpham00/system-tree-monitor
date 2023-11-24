@@ -1874,7 +1874,7 @@ a {
   margin-top: 10px;
 }
 .introduce .introduce__picture {
-  margin: 90px auto 120px;
+  margin: 110px auto 120px;
   width: 1200px;
   height: 400px;
   display: flex;
@@ -2065,7 +2065,7 @@ a {
   border-radius: 2px;
   border: 1px solid #656689;
   padding: 25px 20px 15px;
-  min-height: 350px;
+  min-height: 400px;
   width: 100%;
   background: #dedbd2;
   transition: all 0.25s linear;
@@ -2292,9 +2292,10 @@ a {
   font-size: 2.4rem;
 }
 .nav__tittle {
+  font-family: "Roboto";
   margin-top: 30px;
   color: #0b650f;
-  font-weight: 500;
+  font-weight: 600;
 }
 .nav__desc {
   text-align: justify;
@@ -2422,12 +2423,27 @@ a {
   width: 900px;
 }
 .nav__page .nav__tittle {
-  font-size: 1.8rem;
+  margin-left: 500px;
+  margin-top: 70px;
+  font-size: 2.5rem;
+}
+.nav__page .nav__tittle.tittle-1 {
+  margin-left: 20px;
+}
+.nav__page .nav__tittle.tittle-2 {
+  margin-top: 30px;
+  margin-left: 0;
+  margin-bottom: 20px;
 }
 .nav__page .nav__text {
+  text-align: right;
+  font-style: italic;
   margin-top: 10px;
   font-size: 1.8rem;
   line-height: 1.4;
+}
+.nav__page .nav__text.tittle-1 {
+  text-align: left;
 }
 
 .nav__page.pageSpecial {
@@ -2460,8 +2476,9 @@ a {
   text-align: center;
 }
 .service__operation {
-  font-size: 2rem;
-  font-weight: 500;
+  font-family: "Roboto";
+  font-size: 1.8rem;
+  line-height: 1.3;
   margin: 50px 0;
 }
 .service__operation.special {
@@ -2482,6 +2499,16 @@ a {
   object-fit: cover;
   width: 100%;
   height: 100%;
+}
+.service__row .service__thumb {
+  height: 300px;
+}
+.service__row .service__thumb > img {
+  width: 600px;
+  height: 100%;
+}
+.service__row.special {
+  column-gap: 20px;
 }
 .service__block {
   width: 100%;
@@ -2551,7 +2578,7 @@ a {
   transform: translateY(-10px);
 }
 .service__sick {
-  margin: 50px 0 50px;
+  margin: 20px 0 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2576,6 +2603,7 @@ a {
   background: #a3b18a;
 }
 .service__sick .service__list {
+  margin-bottom: 40px;
   max-width: 1140px;
   display: flex;
   column-gap: 30px;
@@ -2626,7 +2654,7 @@ a {
   background: #3a5a40;
 }
 .service__rateList {
-  margin-top: 50px;
+  margin-top: 80px;
   max-width: 1260px;
   display: flex;
   column-gap: 30px;
@@ -2708,6 +2736,10 @@ a {
   background-color: #0b650f;
 }
 
+.service__heading.heading-1 {
+  margin-top: 50px;
+}
+
 .sick {
   margin-top: 30px;
 }
@@ -2719,36 +2751,39 @@ a {
 .sick__inner .service__heading {
   font-size: 4rem;
   margin-bottom: 30px;
+  color: #4a5759;
 }
-.sick__inner .sick__row {
-  margin-bottom: 30px;
+.sick__inner .sick__table {
+  margin: 0 auto;
+  padding: 40px 50px;
+  width: 1200px;
+  border-radius: 20px;
+  border: 3px solid #4a5759;
+}
+.sick__inner .sick__table .sick__row {
+  margin-bottom: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.sick__inner .sick__row .sick__title {
-  margin-left: 30px;
-  width: 100px;
-  font-size: 4rem;
+.sick__inner .sick__table .sick__row .sick__text {
+  font-size: 2rem;
   font-family: 600;
+  height: 80px;
+  min-width: 120px;
+  padding: 10px 15px;
+  background: #dadada;
   color: #003049;
-}
-.sick__inner .sick__row .sick__title > .text1 {
-  margin-left: 100px;
-}
-.sick__inner .sick__row .sick__title .text2 {
-  display: block;
-  margin-left: -200px;
-}
-.sick__inner .sick__row .sick__title .text3 {
-  display: block;
-  margin-left: -150px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .sick__inner .sick__desc {
   font-family: "Roboto";
   padding: 25px;
   border-radius: 25px;
-  width: 800px;
+  max-width: 800px;
   min-height: 120px;
   background-color: #dedbd2;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -2756,31 +2791,17 @@ a {
   font-style: italic;
   line-height: 1.2;
 }
-.sick__inner .sick__desc.desc-1 {
-  padding: 30px 40px;
-  width: 1200px;
-  margin: 50px auto 20px;
-}
 .sick__inner .sick__color {
   display: inline;
   color: #0b650f;
   font-weight: 500;
 }
 .sick__inner .sick__text {
+  text-align: left;
   font-family: "Roboto";
-  --height: 60px;
-  display: block;
-  line-height: var(--height);
-  column-gap: 10px;
-  min-width: 100px;
-  height: var(--height);
-  background: #588157;
-  border: #588157;
-  text-align: center;
-  border-radius: 99px;
-  max-width: 400px;
-  margin: 0 auto;
-  font-size: 2.4rem;
+  max-width: 200px;
+  margin: 0 20px;
+  font-size: 2rem;
   color: #dadada;
 }
 .sick__inner .sick__listImg {
@@ -2792,6 +2813,15 @@ a {
   border-radius: 5px;
   object-fit: contain;
   width: 100%;
+}
+
+span {
+  display: block;
+  margin-bottom: 3px;
+}
+
+.fa-solid.fa-check {
+  margin-right: 5px;
 }
 
 /*# sourceMappingURL=main.css.map */
