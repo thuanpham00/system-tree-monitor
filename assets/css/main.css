@@ -1346,6 +1346,7 @@ a {
   pointer-events: none;
 }
 .btn__login > .welcome {
+  display: inline;
   margin-left: 5px;
 }
 .btn__login > i {
@@ -1353,6 +1354,7 @@ a {
   font-size: 1.4rem;
 }
 .btn__login .userName {
+  display: inline;
   font-weight: 500;
   font-size: 1.7rem;
   font-family: "Sora";

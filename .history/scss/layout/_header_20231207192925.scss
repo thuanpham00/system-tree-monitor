@@ -125,6 +125,7 @@ a {
   background: transparent;
   border: 2px solid #f7f0f0;
 
+
   > * {
     pointer-events: none;
   }
@@ -138,6 +139,8 @@ a {
   > i {
     color: #344e41;
     font-size: 1.4rem;
+    position: absolute;
+    left: 0;
   }
 
   .userName {

@@ -124,26 +124,28 @@ a {
   padding: 0 15px;
   background: transparent;
   border: 2px solid #f7f0f0;
+  position: relative;
 
   > * {
     pointer-events: none;
   }
 
   > .welcome {
-    display: inline;
-
+    d
+    position: absolute;
     margin-left: 5px;
   }
 
   > i {
     color: #344e41;
     font-size: 1.4rem;
+    position: absolute;
+    left: 0;
   }
 
   .userName {
-    display: inline;
     font-weight: 500;
-    font-size: 1.7rem;
+    font-size: 1.2rem;
     font-family: "Sora";
     color: #344e41;
   }

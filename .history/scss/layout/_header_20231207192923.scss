@@ -125,19 +125,22 @@ a {
   background: transparent;
   border: 2px solid #f7f0f0;
 
+
   > * {
     pointer-events: none;
   }
 
   > .welcome {
     display: inline;
-
+    position: absolute;
     margin-left: 5px;
   }
 
   > i {
     color: #344e41;
     font-size: 1.4rem;
+    position: absolute;
+    left: 0;
   }
 
   .userName {
