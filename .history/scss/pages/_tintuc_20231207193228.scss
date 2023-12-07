@@ -116,7 +116,7 @@
     align-items: center;
     column-gap: 10px;
     cursor: pointer;
-
+    
     .number {
       border-radius: 2px;
       color: #fff;
@@ -126,10 +126,10 @@
       width: 40px;
       height: 40px;
       background: $color-green;
-      transition: all 0.25s linear;
+      tran
 
       &:hover {
-        background: rgba(0, 0, 0, 0.5);
+
       }
     }
   }

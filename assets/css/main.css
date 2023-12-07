@@ -2264,7 +2264,7 @@ a {
 }
 .news__listNumber {
   position: absolute;
-  left: 55%;
+  left: 29%;
   bottom: -20px;
   display: flex;
   align-items: center;
@@ -2272,6 +2272,7 @@ a {
   cursor: pointer;
 }
 .news__listNumber .number {
+  border-radius: 2px;
   color: #fff;
   display: flex;
   align-items: center;
@@ -2279,6 +2280,10 @@ a {
   width: 40px;
   height: 40px;
   background: #0b650f;
+  transition: all 0.25s linear;
+}
+.news__listNumber .number:hover {
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .image-loader {

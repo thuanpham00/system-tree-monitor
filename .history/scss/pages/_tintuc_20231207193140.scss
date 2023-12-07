@@ -110,7 +110,7 @@
 
   &__listNumber {
     position: absolute;
-    left: 29%;
+    left: 30%;
     bottom: -20px;
     display: flex;
     align-items: center;
@@ -118,7 +118,6 @@
     cursor: pointer;
 
     .number {
-      border-radius: 2px;
       color: #fff;
       display: flex;
       align-items: center;
@@ -126,11 +125,6 @@
       width: 40px;
       height: 40px;
       background: $color-green;
-      transition: all 0.25s linear;
-
-      &:hover {
-        background: rgba(0, 0, 0, 0.5);
-      }
     }
   }
 }
