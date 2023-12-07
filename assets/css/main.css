@@ -2167,6 +2167,7 @@ a {
 }
 .news__inner {
   display: flex;
+  position: relative;
 }
 .news__list {
   display: flex;
@@ -2259,7 +2260,43 @@ a {
 .news__sidebar .news__item2 > a:hover {
   color: #0b650f;
 }
+.news__listNumber {
+  position: absolute;
+  left: 55%;
+  bottom: -20px;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  cursor: pointer;
+}
+.news__listNumber .number {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #0b650f;
+}
 
+.image-loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 99%;
+  width: 40px;
+  height: 40px;
+  border: 5px solid #2979ff;
+  border-left: 5px solid transparent;
+  animation: spin 1s infinite linear forwards;
+}
+
+@keyframes spin {
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
 .nav {
   margin-top: 50px;
 }
