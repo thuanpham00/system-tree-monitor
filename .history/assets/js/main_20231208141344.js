@@ -155,7 +155,7 @@ let data = []; // mỗi lần fetch 1 trang là add vô data
 let currentPage = 1;
 const limit = 4;
 const http = axios.create({
-  baseURL: `https://dm92v6-8080.csb.app/listTinTuc`,
+  baseURL: `https://dm92v6-8080.csb.app/listTinTuc?_limit=${limit}`,
 });
 function fetchData(page = 1) {
   http.get(`?_limit=${limit}&_page=${currentPage}`).then((res) => {
