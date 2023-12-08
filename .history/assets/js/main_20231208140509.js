@@ -162,7 +162,7 @@ function fetchData(page = 1) {
     const newData = res.data;
     data = newData;
     imageLoader.style.display = "block";
-    newsList.innerHTML = "" // mỗi lần fetch lại trang thì cho newList rỗng để add data mới
+    newsList.innerHTML = "" // mỗi lần fetch lại trang 
     if (data.length > 0 && Array.isArray(data)) {
       [...data].forEach((item) => createItem(item));
       imageLoader.style.display = "none";

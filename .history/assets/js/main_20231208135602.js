@@ -154,22 +154,20 @@ const imageLoader = document.querySelector(".image-loader");
 let data = []; // mỗi lần fetch 1 trang là add vô data
 let currentPage = 1;
 const limit = 4;
+
 const http = axios.create({
-  baseURL: `https://dm92v6-8080.csb.app/listTinTuc?_limit=${limit}`,
+  baseURL: `https://dm92v6-8080.csb.app/listTinTuc`,
 });
 function fetchData(page = 1) {
-  http.get(`&_page=${currentPage}`).then((res) => {
-    const newData = res.data;
-    data = newData;
-    imageLoader.style.display = "block";
-    newsList.innerHTML = "" // mỗi lần fetch lại trang thì cho newList rỗng để add data mới
-    if (data.length > 0 && Array.isArray(data)) {
-      [...data].forEach((item) => createItem(item));
-      imageLoader.style.display = "none";
-    }
-  });
+  http
+    .get(`?_limit=${limit}&_page=${currentPage}`)
+    .then((res) => {
+      const newData = res.data;
+      data = newData
+      
+    });
 }
-fetchData();
+fetchData()
 
 // cách 2
 // const endPointListNews = `https://dm92v6-8080.csb.app/listTinTuc`;

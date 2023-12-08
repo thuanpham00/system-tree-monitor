@@ -154,15 +154,22 @@ const imageLoader = document.querySelector(".image-loader");
 let data = []; // mỗi lần fetch 1 trang là add vô data
 let currentPage = 1;
 const limit = 4;
+const endPointListNews = `https://dm92v6-8080.csb.app/listTinTuc`;
+
 const http = axios.create({
-  baseURL: `https://dm92v6-8080.csb.app/listTinTuc?_limit=${limit}`,
+  baseURL: `https://dm92v6-8080.csb.app/listTinTuc`,
 });
+
 function fetchData(page = 1) {
-  http.get(`&_page=${currentPage}`).then((res) => {
+  axios({
+    baseURL: `${endPointListNews}`,
+    method: "get", // get dữ liệu về
+    url: `?_limit=${limit}&_page=${currentPage}`,
+  }).then((res) => {
     const newData = res.data;
-    data = newData;
+    data = newData; // add vào mảng
+    newsList.innerHTML = "";
     imageLoader.style.display = "block";
-    newsList.innerHTML = "" // mỗi lần fetch lại trang thì cho newList rỗng để add data mới
     if (data.length > 0 && Array.isArray(data)) {
       [...data].forEach((item) => createItem(item));
       imageLoader.style.display = "none";
@@ -170,27 +177,6 @@ function fetchData(page = 1) {
   });
 }
 fetchData();
-
-// cách 2
-// const endPointListNews = `https://dm92v6-8080.csb.app/listTinTuc`;
-// function fetchData(page = 1) {
-//   axios({
-//     baseURL: `${endPointListNews}`,
-//     method: "get", // get dữ liệu về
-//     url: `?_limit=${limit}&_page=${currentPage}`,
-//   }).then((res) => {
-//     const newData = res.data;
-//     data = newData; // add vào mảng
-//     newsList.innerHTML = "";
-//     imageLoader.style.display = "block";
-//     if (data.length > 0 && Array.isArray(data)) {
-//       [...data].forEach((item) => createItem(item));
-//       imageLoader.style.display = "none";
-//     }
-//   });
-// }
-// fetchData();
-
 const numberPage = document.querySelectorAll(".number");
 [...numberPage].forEach((item, index) =>
   item.addEventListener("click", function (e) {

@@ -150,47 +150,33 @@ const createItem = (item) => {
 };
 
 // sử dụng fetch của trình duyệt hoặc thư viện axios
-const imageLoader = document.querySelector(".image-loader");
+const imageLoader = document.querySelector(".image-loader")
 let data = []; // mỗi lần fetch 1 trang là add vô data
 let currentPage = 1;
 const limit = 4;
+const endPointListNews = `https://dm92v6-8080.csb.app/listTinTuc`;
+
 const http = axios.create({
-  baseURL: `https://dm92v6-8080.csb.app/listTinTuc?_limit=${limit}`,
-});
+  baseURL: 
+})
+
 function fetchData(page = 1) {
-  http.get(`&_page=${currentPage}`).then((res) => {
+  axios({
+    baseURL: `${endPointListNews}`,
+    method: "get", // get dữ liệu về
+    url: `?_limit=${limit}&_page=${currentPage}`, 
+  }).then((res) => {
     const newData = res.data;
-    data = newData;
-    imageLoader.style.display = "block";
-    newsList.innerHTML = "" // mỗi lần fetch lại trang thì cho newList rỗng để add data mới
+    data = newData; // add vào mảng
+    newsList.innerHTML = "";
+    imageLoader.style.display = "block"
     if (data.length > 0 && Array.isArray(data)) {
       [...data].forEach((item) => createItem(item));
-      imageLoader.style.display = "none";
+      imageLoader.style.display = "none"
     }
   });
 }
-fetchData();
-
-// cách 2
-// const endPointListNews = `https://dm92v6-8080.csb.app/listTinTuc`;
-// function fetchData(page = 1) {
-//   axios({
-//     baseURL: `${endPointListNews}`,
-//     method: "get", // get dữ liệu về
-//     url: `?_limit=${limit}&_page=${currentPage}`,
-//   }).then((res) => {
-//     const newData = res.data;
-//     data = newData; // add vào mảng
-//     newsList.innerHTML = "";
-//     imageLoader.style.display = "block";
-//     if (data.length > 0 && Array.isArray(data)) {
-//       [...data].forEach((item) => createItem(item));
-//       imageLoader.style.display = "none";
-//     }
-//   });
-// }
-// fetchData();
-
+fetchData()
 const numberPage = document.querySelectorAll(".number");
 [...numberPage].forEach((item, index) =>
   item.addEventListener("click", function (e) {
