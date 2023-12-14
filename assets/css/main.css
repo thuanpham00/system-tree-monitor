@@ -1228,6 +1228,7 @@ a {
   }
 }
 .header {
+  position: relative;
   background: #dad7cd;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   transition: all 0.25s linear;
@@ -1289,6 +1290,7 @@ a {
 .header__inner .header__right .header__search > i {
   font-size: 1.8rem;
   cursor: pointer;
+  pointer-events: none;
 }
 .header__inner .header__right .header__btn {
   --height: 60px;
@@ -1398,6 +1400,62 @@ a {
 }
 .btn__logout .logout__list .logout__item:last-child {
   border: none;
+}
+
+.header__searchInfo {
+  overflow-x: hidden;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0%;
+  transition: all 0.25s linear;
+}
+.header__searchInfo .header__inner {
+  z-index: 10;
+  background: #fff;
+  min-width: 1200px;
+  height: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow-x: hidden;
+}
+.header__searchInfo.visible {
+  visibility: visible;
+  opacity: 1;
+}
+.header__searchInfo.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+.header__searchInfo .header__close {
+  padding: 15px 10px;
+  width: 90px;
+  height: 40px;
+  background: #f2e8cf;
+  position: absolute;
+  right: 0px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+  cursor: pointer;
+}
+.header__searchInfo .header__close > * {
+  pointer-events: none;
+  color: #283618;
+}
+.header__searchInfo .header__close span {
+  font-weight: 500;
+}
+.header__searchInfo .header__close i {
+  transition: all 0.25s linear;
+}
+.header__searchInfo .header__close i:hover {
+  transform: translateY(-2px);
 }
 
 .container {
