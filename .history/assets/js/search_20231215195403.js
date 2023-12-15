@@ -56,6 +56,7 @@ const createItemSick = (item) => {
 };
 
 // dùng try catch thì async await đi cùng và không dùng then()
+
 const url1 = "/listTinTuc";
 const fetchSearch1 = async (link = url1) => {
   try {
